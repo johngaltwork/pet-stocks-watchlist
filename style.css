@@ -1,0 +1,25 @@
+/*.form_wraper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+*/
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+span,
+.check {
+  margin-right: 20px;
+}
