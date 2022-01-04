@@ -2,14 +2,18 @@ const body = document.body;
 const form_wraper = document.createElement('div');
 form_wraper.classList.add('form_wraper');
 const form = `
-    <div class='flex'>
-    <input class='ticker'>
-    <input class='side'>
-    <input class='context'>
-    <input class='execution'>
-    <button type="button" class='sub'>Добавить</button>
+    <div></div>
+    <div class='form'>
+      <input class='ticker'>
+      <input class='side'>
+      <input class='context'>
+      <input class='execution'>
+      <button type="button" class='sub'>Добавить</button>
     </div>
-    <ul></ul>
+    <div></div>
+    <div></div>
+    <div class='list'><ul></ul></div>
+    <div></div>
 `;
 body.appendChild(form_wraper);
 form_wraper.innerHTML = form;
