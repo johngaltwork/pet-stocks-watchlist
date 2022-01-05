@@ -14,6 +14,12 @@ body {
   font-size: 1em;
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(130deg, #666c83, #b88181 41.07%, #a5c4c5 76.05%);
+  /* background-image: url('/img/bg.jpg');
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
 }
 
 li {
@@ -47,7 +53,6 @@ li {
 */
 span,
 .check {
-  margin-right: 20px;
 }
 
 /*Grid styles*/
@@ -65,4 +70,115 @@ span,
 .list {
 }
 .list > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 3fr 3fr;
+  grid-gap: 0.5em;
+  justify-content: center;
+}
+
+.gridinp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  justify-content: center;
+}
+
+.inpval {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  -webkit-appearance: none;
+  display: block;
+  background: none;
+  color: #cbd1d1;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.inpval:focus {
+  outline: none;
+}
+/* width: 20%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #e9eff6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+} */
+
+.outputstyle {
+  text-align: center;
+  font: optional;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
+.check {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
 }

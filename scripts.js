@@ -3,12 +3,16 @@ const form_wraper = document.createElement('div');
 form_wraper.classList.add('form_wraper');
 const form = `
     <div></div>
-    <div class='form'>
-      <input class='ticker'>
-      <input class='side'>
-      <input class='context'>
-      <input class='execution'>
-      <button type="button" class='sub'>Добавить</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class='form gridinp'>
+      <input class='ticker inpval'>
+      <input class='side inpval'>
+      <input class='context inpval'>
+      <input class='execution inpval'>
+      
+      <div class="sub btn btn-one"><span>Добавить</span></div>
     </div>
     <div></div>
     <div></div>
@@ -41,11 +45,11 @@ function handleClick(e) {
     counter = counter + 1;
 
     const row_list = `<li id='li${counter}'>
-    <input type="checkbox" class='check' id='check${counter}'>
-    <span class='ticker_val'>${ticker_val.value}</span>
-    <span class='side_val'>${side_val.value}</span>
-    <span class='context_val'>${context_val.value}</span>
-    <span class='execution_val'>${execution_val.value}</span>
+    <span class='check'><input type="checkbox" id='check${counter}'></span>
+    <span class='ticker_val outputstyle'>${ticker_val.value}</span>
+    <span class='side_val outputstyle'>${side_val.value}</span>
+    <span class='context_val outputstyle'>${context_val.value}</span>
+    <span class='execution_val outputstyle'>${execution_val.value}</span>
     </li>`;
     const ulList = form_wraper.querySelector('ul');
     ulList.insertAdjacentHTML('afterbegin', row_list);
