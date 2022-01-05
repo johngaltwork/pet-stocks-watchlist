@@ -16,7 +16,7 @@ const form = `
     </div>
     <div></div>
     <div></div>
-    <div class='list'><ul></ul></div>
+    <div class='ullist'><ul></ul></div>
     <div></div>
 `;
 body.appendChild(form_wraper);
@@ -44,14 +44,18 @@ function handleClick(e) {
     //document.querySelector('.alert').remove();
     counter = counter + 1;
 
-    const row_list = `<li id='li${counter}'>
-    <span class='check'><input type="checkbox" id='check${counter}'></span>
+    const row_list = `<ul class='list'><li id='li${counter}'>
+    <span class='check'>
+    
+    <input type="checkbox" id="todo" class='check${counter}' name="todo" value="todo"> 
+
+    </span>
     <span class='ticker_val outputstyle'>${ticker_val.value}</span>
     <span class='side_val outputstyle'>${side_val.value}</span>
     <span class='context_val outputstyle'>${context_val.value}</span>
     <span class='execution_val outputstyle'>${execution_val.value}</span>
-    </li>`;
-    const ulList = form_wraper.querySelector('ul');
+    </li></ul>`;
+    const ulList = form_wraper.querySelector('.ullist');
     ulList.insertAdjacentHTML('afterbegin', row_list);
 
     const arrVal = [ticker_val, side_val, context_val, execution_val];
