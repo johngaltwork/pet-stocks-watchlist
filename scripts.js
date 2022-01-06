@@ -7,10 +7,26 @@ const form = `
     <div></div>
     <div></div>
     <div class='form gridinp'>
-      <input class='ticker inpval'>
-      <input class='side inpval'>
-      <input class='context inpval'>
-      <input class='execution inpval'>
+
+      <div class="form__group field">
+        <input class='ticker inpval form__field' placeholder="Ticker" name="ticker" id='ticker' required />
+        <label for="ticker" class="form__label">Ticker</label>
+      </div>
+
+      <div class="form__group field">
+        <input class='side inpval form__field' placeholder="Side" name="side" id='side' required />
+        <label for="side" class="form__label">Side</label>
+      </div>
+
+      <div class="form__group field">
+        <input class='context inpval form__field' placeholder="Context" name="context" id='context' required />
+        <label for="context" class="form__label">Context</label>
+      </div>
+
+      <div class="form__group field">
+        <input class='execution inpval form__field' placeholder="Execution" name="execution" id='execution' required />
+        <label for="execution" class="form__label">Execution</label>
+      </div>
       
       <div class="sub btn btn-one"><span>Добавить</span></div>
     </div>
