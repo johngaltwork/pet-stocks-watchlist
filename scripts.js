@@ -70,14 +70,34 @@ function handleClick(e) {
     <span class='side_val outputstyle'>${side_val.value}</span>
     <span class='context_val outputstyle'>${context_val.value}</span>
     <span class='execution_val outputstyle'>${execution_val.value}</span>
-    </li></ul>`;
+    </li>
+    </ul>`;
     const ulList = form_wraper.querySelector('.ullist');
     ulList.insertAdjacentHTML('afterbegin', row_list);
 
+    const AdddeleteButton = `<div class="sub btn btn-one" id="delete"><span>Удалить</span></div>`;
+    if (document.querySelector('#delete') == null) {
+      ulList.insertAdjacentHTML('beforeend', AdddeleteButton);
+    }
+
     const arrVal = [ticker_val, side_val, context_val, execution_val];
     arrVal.forEach((e) => (e.value = ''));
-    //console.log(counter);
   }
+
+  //Удаление строк
+  const getUl = document.getElementById('todo');
+  getUl.addEventListener('click', function () {
+    this.closest('ul').classList.toggle('active');
+  });
+
+  const delBut = document.getElementById('delete');
+
+  delBut.addEventListener('click', function () {
+    const checkedUl = document
+      .querySelectorAll('.active')
+      .forEach((e) => e.remove());
+    console.log(checkedUl);
+  });
 }
 add_button.addEventListener('click', handleClick);
 let counter = 0;
