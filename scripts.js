@@ -75,7 +75,11 @@ function handleClick(e) {
     const ulList = form_wraper.querySelector('.ullist');
     ulList.insertAdjacentHTML('afterbegin', row_list);
 
-    const AdddeleteButton = `<div class="sub btn btn-one" id="delete"><span>Удалить</span></div>`;
+    const AdddeleteButton = `<div class='delwrap'>
+    <div></div>
+    <div class="sub btn btn-one" id="delete"><span>Удалить</span></div>
+    <div></div>
+    </div>`;
     if (document.querySelector('#delete') == null) {
       ulList.insertAdjacentHTML('beforeend', AdddeleteButton);
     }
